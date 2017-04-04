@@ -20,7 +20,8 @@ kirbytext::$tags['fotorama'] = array(
     'click',
     'swipe',
     'navposition',
-    'direction'
+    'direction',
+    'nav'	  
   ),
   'html' => function($tag) {
   	$gallery = "";
@@ -106,6 +107,10 @@ kirbytext::$tags['fotorama'] = array(
 
   		if ($tag->attr('direction', '') != '') {
   			$gallery .= ' data-direction="'.$tag->attr('direction').'"';
+  		}
+		
+		if ($tag->attr('nav', '') != '') {
+  			$gallery .= ' data-nav="'.$tag->attr('nav').'"';
   		}
 
   		$gallery .= '>';
